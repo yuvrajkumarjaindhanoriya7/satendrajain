@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satendra Jain - Portfolio</title>
+    <title>Satendra Jain - Financial Consultant</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,112 +19,195 @@
         }
 
         .glass-container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
             padding: 40px;
             width: 100%;
-            max-width: 600px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            max-width: 650px;
+            box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.4);
         }
 
         header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin: 0;
             letter-spacing: 1px;
-            background: linear-gradient(to right, #ffffff, #ece9e6);
+            background: linear-gradient(to right, #ffffff, #8da5b4);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            font-weight: 700;
         }
 
         .subtitle {
-            font-size: 1rem;
-            color: #b0bec5;
-            margin-top: 5px;
+            font-size: 1.1rem;
+            color: #00d2ff;
+            margin-top: 8px;
             text-transform: uppercase;
             letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            text-align: center;
+            line-height: 1.6;
+            color: #e0e6ed;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        .trust-badge {
+            display: inline-block;
+            background: rgba(0, 210, 255, 0.15);
+            border: 1px solid rgba(0, 210, 255, 0.3);
+            color: #00d2ff;
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
         }
 
         hr {
             border: 0;
             height: 1px;
-            background: rgba(255, 255, 255, 0.2);
-            margin: 20px 0;
+            background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.25), rgba(255,255,255,0));
+            margin: 25px 0;
         }
 
         h2 {
             font-size: 1.4rem;
-            color: #e0e0e0;
+            color: #ffffff;
             margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 30px 0;
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.15);
         }
 
-        li {
+        /* Experience Brands Grid */
+        .brands-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .brand-card {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+            font-weight: 500;
+            color: #f0f4f8;
+        }
+
+        /* Services Section */
+        .services-list {
+            margin-bottom: 25px;
+        }
+
+        .service-item {
             background: rgba(255, 255, 255, 0.05);
-            margin-bottom: 10px;
-            padding: 12px 20px;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: transform 0.2s;
+            margin-bottom: 12px;
+            padding: 16px 20px;
+            border-radius: 14px;
+            border-left: 4px solid #00d2ff;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-right: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        li:hover {
-            transform: translateX(5px);
-            background: rgba(255, 255, 255, 0.08);
+        .service-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 4px;
         }
 
+        .service-desc {
+            font-size: 0.95rem;
+            color: #b0bec5;
+        }
+
+        .partnership {
+            font-size: 0.9rem;
+            color: #ffb74d;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        /* CTA Buttons */
         .btn-container {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
+            margin-top: 10px;
         }
 
         .btn {
             flex: 1;
-            min-width: 150px;
-            padding: 14px;
-            font-size: 1rem;
-            font-weight: 600;
+            min-width: 160px;
+            padding: 16px;
+            font-size: 1.05rem;
+            font-weight: 700;
             text-decoration: none;
             text-align: center;
-            border-radius: 12px;
-            transition: all 0.3s ease;
+            border-radius: 14px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-sizing: border-box;
+            letter-spacing: 0.5px;
         }
 
         .btn-email {
-            background: rgba(0, 123, 255, 0.25);
-            color: #fff;
-            border: 1px solid rgba(0, 123, 255, 0.4);
+            background: rgba(0, 180, 216, 0.2);
+            color: #00e5ff;
+            border: 1px solid rgba(0, 180, 216, 0.4);
         }
 
         .btn-email:hover {
-            background: rgba(0, 123, 255, 0.4);
-            box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+            background: rgba(0, 180, 216, 0.4);
+            color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 180, 216, 0.4);
+            transform: translateY(-2px);
         }
 
         .btn-call {
-            background: rgba(40, 167, 69, 0.25);
-            color: #fff;
-            border: 1px solid rgba(40, 167, 69, 0.4);
+            background: rgba(46, 196, 182, 0.25);
+            color: #2ec4b6;
+            border: 1px solid rgba(46, 196, 182, 0.4);
         }
 
         .btn-call:hover {
-            background: rgba(40, 167, 69, 0.4);
-            box-shadow: 0 0 15px rgba(40, 167, 69, 0.4);
+            background: rgba(46, 196, 182, 0.45);
+            color: #ffffff;
+            box-shadow: 0 0 20px rgba(46, 196, 182, 0.4);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 480px) {
+            .brands-container {
+                grid-template-columns: 1fr;
+            }
+            .btn-container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -133,27 +216,42 @@
     <div class="glass-container">
         <header>
             <h1>Satendra Jain</h1>
-            <p class="subtitle">Portfolio</p>
+            <p class="subtitle">Senior Financial Consultant</p>
+            <p class="tagline">"Bringing over a decade of trusted banking expertise directly to your doorstep with uncompromised security."</p>
+            <div class="trust-badge">🛡️ 100% GENUINE DATA SAFETY</div>
         </header>
 
-        <hr>
+        <section>
+            <h2>10+ Years of Banking Excellence</h2>
+            <div class="brands-container">
+                <div class="brand-card">ICICI Bank</div>
+                <div class="brand-card">IIFL Bank</div>
+                <div class="brand-card">JANA Small Finance Bank</div>
+                <div class="brand-card">PNB Housing Finance</div>
+            </div>
+        </section>
 
         <section>
-            <h2>Experience</h2>
-            <ul>
-                <li>ICICI Bank</li>
-                <li>IIFL Bank</li>
-                <li>Capri Gold Loan</li>
-                <li>Bajaj Finance</li>
-            </ul>
+            <h2>Premium Loan Services</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="service-title">📍 Doorstep Personal Loan</div>
+                    <div class="service-desc">Get hassle-free personal funding with maximum convenience right at your home or office.</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-title">💼 Business Loan Solutions</div>
+                    <div class="service-desc">Fuel your business growth with tailored and quick commercial loan structures.</div>
+                    <div class="partnership">🤝 In Association with: Priyal Marketing Pvt. Ltd. (Indore)</div>
+                </div>
+            </div>
         </section>
 
         <hr>
 
         <section>
             <div class="btn-container">
-                <a href="mailto:satyendrajain34@gmail.com" class="btn btn-email">Click to Email</a>
-                <a href="tel:+919009503364" class="btn btn-call">Click to Call</a>
+                <a href="mailto:satendrajain34@gmail.com" class="btn btn-email">📧 Click to Email</a>
+                <a href="tel:+919009503364" class="btn btn-call">📞 Click to Call</a>
             </div>
         </section>
     </div>
